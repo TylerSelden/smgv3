@@ -1,0 +1,521 @@
+/* Full Page */
+
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Global */
+
+table {
+  table-layout: fixed;
+  border: 2px solid black;
+}
+
+tr {
+  overflow-wrap: break-word;
+}
+
+.buy-sell-button,
+.header-button {
+  cursor: pointer;
+}
+
+header {
+  z-index: 1;
+  height: 5vw;
+  background-color: #8AAAE5;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+}
+
+footer {
+  z-index: 0;
+  position: fixed;
+  bottom: 0;
+  height: 2vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: white;
+}
+
+red {
+  color: red;
+}
+
+green {
+  color: green;
+}
+
+grey {
+  color: grey;
+}
+
+bold {
+  font-weight: bold;
+}
+
+/* Always there stuff */
+
+h1,
+h2 {
+  width: 100vw;
+  text-align: center;
+}
+
+h2 {
+  position: static;
+  font-size: 4vw;
+  font-weight: bold;
+  margin-bottom: 2vw;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 1vw;
+
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+td {
+  cursor: pointer;
+  user-select: none;
+}
+
+tr {
+  height: 5vw;
+}
+
+th {
+  background-color: #aaaaaa;
+  border: none;
+}
+
+tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+
+tr:hover:not(:first-of-type) {
+  background-color: #cccccc;
+}
+
+p,
+ul {
+  max-width: 35vw;
+}
+
+/* Header */
+
+.dummy-header {
+  height: 5vw;
+}
+
+.page-header {
+  font-size: 3.5vw;
+  font-weight: bold;
+  margin: auto;
+  top: 0;
+  position: fixed;
+}
+
+.header-icons {
+  position: fixed;
+  right: 0;
+  display: flex;
+  height: 5vw;
+}
+
+.header-icons img {
+  height: 3vw;
+  margin: 1vw;
+  float: right;
+}
+
+.header-button {
+  border: none;
+  background: transparent;
+}
+
+.header-button:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* Left Sidebar */
+
+.sidebar {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  width: 6vw;
+  height: 100%;
+  background-color: #5B5B5B;
+  overflow: hidden;
+  transition: width 0.5s ease;
+}
+
+.sidebar .first {
+  margin-top: 0;
+}
+
+.sidebar:hover {
+  width: 25vw;
+}
+
+.sidebar-icon {
+  display: flex;
+  align-items: center;
+  height: 5vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+
+.sidebar-icon:hover:not(:first-of-type) {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.sidebar-icon img {
+  height: 3vw;
+  width: 3vw;
+  margin: 1.5vw;
+}
+
+.sidebar-button {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+
+  font-size: 2vw;
+  font-weight: bold;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+
+/* footer */
+
+.dummy-footer {
+  height: 10vh;
+}
+
+.footer-text {
+  font-size: 1vw;
+  margin-right: 1vw;
+}
+
+
+.balance-net p {
+  padding-bottom: 0.5vw;
+  margin: auto;
+  text-align: center;
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+/* Tables */
+
+.expanded {
+  width: 75vw !important;
+}
+
+.table-container {
+  /* position: absolute; */
+  width: 100vw;
+  /* height: 74vh; */
+  margin: auto;
+  margin-top: 1vw;
+  /* overflow-y: scroll; */
+  /* top: 25vh; */
+}
+
+.market-table, .leaderboard-table, .transaction-table {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 75vw;
+}
+
+/* messages/notifications window */
+
+.notifications-outclick { /* Div below notify window to click out*/
+  z-index: 3;
+  width: 0;
+  height: 0;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.notifications {
+  position: absolute;
+  right: 0;
+  width: 25vw;
+  height: 60vh;
+  background-color: #888888;
+  z-index: 4;
+  overflow-y: scroll;
+}
+
+.notifications-table {
+  table-layout: fixed;
+  hyphens: auto;
+  border: none;
+  width: 100%;
+}
+
+.notifications-table td {
+  background-color: #aaaaaa;
+}
+
+.unread {
+  background-color: #dddddd !important;
+}
+
+.notifications-table td,
+.notifications-table th {
+  border: none;
+  height: 5vh;
+}
+
+/* Expanded */
+
+.expanded {
+  position: relative;
+  height: 17vw;
+  cursor: auto;
+  user-select: auto;
+
+}
+
+h3 {
+  font-size: 2vw;
+  position: absolute;
+  margin-top: 1.5vh;
+  top: 0;
+}
+
+select {
+  width: 8vw;
+  height: 4.4vw;
+  font-size: 1.6vw;
+  font-weight: bold;
+  border: 4px solid black;
+  border-radius: 3px;
+}
+
+.send-transaction-request {
+  cursor: pointer;
+  width: 15vw;
+  position: absolute;
+  right: 7vw;
+  bottom: 0.4vw;
+}
+
+.send-transaction-request:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+input,
+.buy-sell-button {
+  width: 10vw;
+  height: 3.5vw;
+  font-size: 1.6vw;
+  font-weight: bold;
+  border: 4px solid black;
+  border-radius: 3px;
+}
+
+
+textarea {
+  width: 20vw;
+  height: 8vw;
+  font-size: 1.4vw;
+  font-weight: bold;
+  border: 4px solid black;
+  border-radius: 3px;
+  resize: none;
+  outline: none;
+  position: absolute;
+  right: 4vw;
+  top: 4vw;
+}
+
+.owned-available {
+  position: absolute;
+  bottom: 0;
+  padding: 0;
+}
+
+.market-table h4 {
+  margin: 1vh;
+  margin-left: 0;
+}
+
+.colon {
+  display: inline;
+  font-size: 2.5vw;
+}
+
+.equation-key {
+  position: absolute;
+  left: 24vw;
+  top: 5vh;
+}
+
+.equation-values {
+  position: absolute;
+  left: 30vw;
+  top: 5vh;
+}
+
+.equation-key>h4,
+.equation-values>h4 {
+  margin-bottom: 2vh;
+  font-size: 1.75vw;
+}
+
+.equation-values>h4 {
+  text-align: right;
+}
+
+.equation-bar {
+  border-bottom: 2px solid black;
+}
+
+.buy-sell-button {
+  position: absolute;
+  bottom: 1vh;
+  border-radius: 5px;
+  left: 27vw;
+}
+
+.buy-sell-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.expanded-graph {
+  position: absolute;
+  border: 2px solid black;
+  top: 5vh;
+  left: 43vw;
+  width: 20vw;
+  height: 10vw;
+}
+
+.expanded-graph-stats {
+  position: absolute;
+  left: 46vw;
+  top: calc(8vh + 10vw);
+}
+
+.expanded-graph-stats>h4 {
+  display: inline;
+}
+
+.full-graph-stats {
+  position: absolute;
+  right: 0;
+}
+
+.upper {
+  top: 0;
+}
+
+.lower {
+  bottom: 0;
+}
+
+/* Baby graphs */
+
+.small-graph {
+  border: 2px solid black;
+  height: 5vh;
+  width: 12vw;
+  margin: auto;
+}
+
+/* Transactions Table */
+
+.transaction-table h4 {
+  display: table-cell;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1vw;
+}
+
+.default-info {
+  position: absolute;
+  top: 0;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.expanded.transactions td {
+  padding: 0;
+}
+
+/* .transaction-options {
+  width: 75vw;
+  height: 17vw;
+} */
+
+.transaction-master {
+  position: absolute;
+  top: 4vw;
+  margin-left: 2vw;
+}
+
+.transaction-slave {
+  position: absolute;
+  top: 10vw;
+  margin-left: 2vw;
+}
+
+.transaction-master * {
+  display: inline;
+}
+
+.transaction-master h5, .transaction-slave h5 {
+  display: inline;
+  font-size: 2.25vw;
+}
+
+/* Master Graph */
+
+.graph-container {
+  width: 100vw;
+  margin: auto;  /* But is it really needed? */
+  margin-top: 1vw;
+}
+
+.master-graph {
+  border: 2px solid black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 75vw;
+}
+
+/* Finish Master Graph */

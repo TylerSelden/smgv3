@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Stonks</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="dummy-header"></div>
+  <header>
+    <h1 class="page-header">Stonks v3</h1>
+    <div class="header-icons">
+      <button onclick="alert('How to Play button clicked')" class="header-button" title="How to Play"><img
+          src="images/how-to-play.png" alt="icon1"></button>
+      <button onclick="Buttons.notifications.show()" class="header-button notifications-button" title="Messages"><img
+          src="images/messages-notification.png" id="messages-icon" alt="icon2"></button>
+    </div>
+  </header>
+
+  <!-- sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-icon first">
+      <button class="sidebar-button" disabled>
+        <img src="images/menu.png" alt="icon1">
+        Menu
+      </button>
+    </div>
+    <div class="sidebar-icon">
+      <button onclick="showScreen('market')" class="sidebar-button">
+        <img src="images/market.png" alt="icon2">
+        The Market
+      </button>
+    </div>
+    <div class="sidebar-icon">
+      <button onclick="showScreen('graph')" class="sidebar-button">
+        <img src="images/master-graph.png" alt="icon2">
+        Master Graph
+      </button>
+    </div>
+    <div class="sidebar-icon">
+      <button onclick="showScreen('transactions')" class="sidebar-button">
+        <img src="images/trading.png" alt="icon2">
+        Transactions
+      </button>
+    </div>
+    <div class="sidebar-icon">
+      <button onclick="showScreen('leaderboard')" class="sidebar-button">
+        <img src="images/leaderboard.png" alt="icon2">
+        Leaderboard
+      </button>
+    </div>
+  </div>
+
+  <!-- notifications window -->
+
+  <div id="notifications-outclick" class="notifications-outclick" onclick="Buttons.notifications.hide()"></div>
+
+  <div class="notifications" id="notifications" style="display: none;">
+    <table class="notifications-table">
+      <tr>
+        <th>Messages</th>
+      </tr>
+      <tr>
+        <td class="unread">Message numbero uno: su madre</td>
+      </tr>
+      <tr>
+        <td class="unread">Message numbero uno: su madre</td>
+      </tr>
+      <tr>
+        <td>Message numbero uno: su madrealksdjflaksdjflkasjdflkasdjflkadsj</td>
+      </tr>
+      <tr>
+        <td>Message numbero uno: su madre</td>
+      </tr>
+      <tr>
+        <td>Message numbero uno: su madre</td>
+      </tr>
+      <tr>
+        <td>Message numbero uno: su madre</td>
+      </tr>
+      <tr>
+        <td>Message numbero uno: su madre</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- headers -->
+
+  <h2 id="header">The Market</h2>
+  <div class="balance-net">
+    <p>Balance: $4,759,285.83</p>
+    <p>Net Worth: $6,375,375.85</p>
+  </div>
+
+  <!-- 
+goople
+orange
+bigmoon
+pepzi
+walnart
+walgreenz
+microhard
+tezla
+instagramma
+bookface
+samsang
+amazoon
+diznee
+(dinosaur_incorperated)
+ -->
+
+  <!-- The Market -->
+  <div class="table-container" id="market-screen">
+    <table class="market-table">
+      <tr>
+        <th>Company</th>
+        <th>Available</th>
+        <th>Owned</th>
+        <th>Graph</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>Goople</td>
+        <td>4,976</td>
+        <td>71</td>
+        <td><canvas class="small-graph"></canvas></td>
+        <td>
+          <green>↿ $676.71</green>
+        </td>
+      </tr>
+      <tr>
+        <td>BookFace</td>
+        <td>217</td>
+        <td>104</td>
+        <td><canvas class="small-graph"></td>
+        <td>
+          <red>⇃ $2,741.96</red>
+        </td>
+      </tr>
+      <tr>
+        <td>Orange</td>
+        <td>968</td>
+        <td>31</td>
+        <td><canvas class="small-graph"></td>
+        <td>
+          <green>↿ $41.50</green>
+        </td>
+      </tr>
+      <tr>
+        <td>InstaGramma</td>
+        <td>170</td>
+        <td>0</td>
+        <td><canvas class="small-graph"></td>
+        <td>
+          <grey>⇀ $1,471.29</grey>
+        </td>
+      </tr>
+      <tr>
+        <td>InstaGramma</td>
+        <td>170</td>
+        <td>0</td>
+        <td><canvas class="small-graph"></td>
+        <td>
+          <grey>⇀ $1,471.29</grey>
+        </td>
+      </tr>
+      <tr>
+        <td>InstaGramma</td>
+        <td>170</td>
+        <td>0</td>
+        <td><canvas class="small-graph"></td>
+        <td>
+          <grey>⇀ $1,471.29</grey>
+        </td>
+      </tr>
+      <tr>
+        <td>InstaGramma</td>
+        <td>170</td>
+        <td>0</td>
+        <td><canvas class="small-graph"></td>
+        <td>
+          <grey>⇀ $1,471.29</grey>
+        </td>
+      </tr>
+      <tr>
+        <td class="expanded market" colspan="5">
+          <h3>Instagramma</h3>
+          <select>
+            <option value="Sell">Sell</option>
+            <option value="Buy">Buy</option>
+          </select>
+          <input type="number" min="0" value="10">
+          <h4 class="colon">:</h4>
+          <div class="owned-available">
+            <h4>Owned: 31</h4>
+            <h4>Available: 968</h4>
+          </div>
+          <div class="equation-key">
+            <h4>Price</h4>
+            <h4>Fees</h4>
+            <h4>Total</h4>
+          </div>
+          <div class="equation-values">
+            <h4>$9,433.60</h4>
+            <h4 class="equation-bar">$500.00</h4>
+            <h4>
+              <red>-$9,933.60</red>
+            </h4>
+          </div>
+          <button class="buy-sell-button" onclick="alert('this ui does nothing :/')">Buy</button>
+          <canvas class="expanded-graph"></canvas>
+          <div class="expanded-graph-stats">
+            <h4>$468.21</h4>
+            <h4>
+              <green>+3.47</green>
+            </h4>
+          </div>
+          <div class="full-graph-stats upper">
+            <h4>$471.68</h4>
+            <h4>
+              <green>↿ $41.50</green>
+            </h4>
+          </div>
+          <div class="full-graph-stats lower">
+            <h4>Cap: $512.18</h4>
+            <h4>Low: $136.12</h4>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>InstaGramma</td>
+        <td>170</td>
+        <td>0</td>
+        <td><canvas class="small-graph"></td>
+        <td>
+          <grey>⇀ $1,471.29</grey>
+        </td>
+      </tr>
+      <tr>
+        <td>InstaGramma</td>
+        <td>170</td>
+        <td>0</td>
+        <td><canvas class="small-graph"></td>
+        <td>
+          <grey>⇀ $1,471.29</grey>
+        </td>
+      </tr>
+      <tr>
+        <td>InstaGramma</td>
+        <td>170</td>
+        <td>0</td>
+        <td><canvas class="small-graph"></td>
+        <td>
+          <grey>⇀ $1,471.29</grey>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Master Graph -->
+  <div class="graph-container" id="graph-screen" style="display: none;">
+    <canvas class="master-graph"></canvas>
+  </div>
+
+  <!-- Transactions -->
+
+  <div class="table-container" id="transactions-screen" style="display: none;">
+    <table class="transaction-table">
+      <tr>
+        <th>Username</th>
+        <th>Net Worth</th>
+        <th>Staking</th>
+      </tr>
+      <tr>
+        <td>🟢 TSel1209</td>
+        <td>$999,999,999,998,999,999,999,999,999,999,999,999,999.99</td>
+        <td>
+          <red>Not Staking</red>
+        </td>
+      </tr>
+      <tr class="expanded transactions">
+        <td colspan="3">
+          <div class="default-info">
+            <h4>🟢 Bennett</h4>
+            <h4>$739,793,573,573.02</h4>
+            <h4>
+              <red>Not Staking</red>
+            </h4>
+          </div>
+          <div class="transaction-master">
+            <h5>You give $</h5>
+            <input type="number" min="0" value="100">
+            <h5> in </h5>
+            <input type="number" min="0" max="24" value="0">
+            <select>
+              <option value="Minutes">Minutes</option>
+              <option value="Hours" selected>Hours</option>
+              <option value="Days">Days</option>
+            </select>
+          </div>
+          <div class="transaction-slave">
+            <h5>You get $</h5>
+            <input type="number" min="0" value="1000">
+            <h5> in </h5>
+            <input type="number" min="0" max="24" value="10">
+            <select>
+              <option value="Minutes">Minutes</option>
+              <option value="Hours" selected>Hours</option>
+              <option value="Days">Days</option>
+            </select>
+          </div>
+          <textarea placeholder="Write a message to Bennett..." ></textarea>
+          <input type="submit" class="send-transaction-request" onclick="alert('transaction request sent to bennett')" value="Send Request">
+        </td>
+      </tr>
+      <tr>
+        <td>🟢 Salty Saulita</td>
+        <td>$7389182347981237498127348132794</td>
+        <td>
+          <green>$573,859.93</green>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Leaderboard -->
+
+  <div class="table-container">
+    <table class="leaderboard-table" id="leaderboard-screen" style="display: none;">
+      <tr>
+        <th>Username</th>
+        <th>Net Worth</th>
+        <th>Staking</th>
+      </tr>
+      <tr>
+        <td>🟢 TSel1209</td>
+        <td>$999,999,999,998,999,999,999,999,999,999,999,999,999.99</td>
+        <td>
+          <red>Not Staking</red>
+        </td>
+      </tr>
+      <tr>
+        <td>🟢 Bennett</td>
+        <td>$0.00</td>
+        <td>
+          <red>Not Staking</red>
+        </td>
+      </tr>
+      <tr>
+        <td>🟢 Salty Saulita</td>
+        <td>$7389182347981237498127348132794</td>
+        <td>
+          <green>$573,859.93</green>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p class="footer-text">
+      <bold>Stonks vX.XX.XX 🟢 <green>Connected</green>
+      </bold>
+    </p>
+  </footer>
+  <div class="dummy-footer"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+<!-- ok so now like code in every single other page -->
