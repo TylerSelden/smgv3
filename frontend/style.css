@@ -17,6 +17,7 @@ table {
 
 tr {
   overflow-wrap: break-word;
+  height: 5vw;
 }
 
 .buy-sell-button,
@@ -87,15 +88,12 @@ th {
 
   font-size: 1.5vw;
   font-weight: bold;
+  overflow: hidden;
 }
 
 td {
   cursor: pointer;
   user-select: none;
-}
-
-tr {
-  height: 5vw;
 }
 
 th {
@@ -344,8 +342,8 @@ select {
 input,
 .buy-sell-button {
   width: 10vw;
-  height: 3.5vw;
-  font-size: 1.6vw;
+  height: 3vw;
+  font-size: 1.5vw;
   font-weight: bold;
   border: 4px solid black;
   border-radius: 3px;
@@ -364,6 +362,7 @@ textarea {
   position: absolute;
   right: 4vw;
   top: 4vw;
+  padding: 0.5vw;
 }
 
 .owned-available {
@@ -447,6 +446,10 @@ textarea {
   top: 0;
 }
 
+.upper h4 {
+  text-align: right;
+}
+
 .lower {
   bottom: 0;
 }
@@ -504,7 +507,7 @@ textarea {
 
 .transaction-master h5, .transaction-slave h5 {
   display: inline;
-  font-size: 2.25vw;
+  font-size: 1.5vw;
 }
 
 /* Master Graph */
