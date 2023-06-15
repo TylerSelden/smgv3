@@ -1,3 +1,6 @@
+// "Rotate device to landscape mode" functionality
+// don't allow decimals in inputs
+
 var Screens = {
   market: {
     id: "market-screen",
@@ -50,8 +53,3 @@ function showScreen(name) {
   }
   Screens[name].element.style = "";
 }
-
-
-// if screen is < 10x8, css will fail
-
-//don't allow decimals in inputs

@@ -204,6 +204,9 @@ ul {
   white-space: nowrap;
 }
 
+.first > .sidebar-button {
+  cursor: default;
+}
 
 /* footer */
 
@@ -320,7 +323,7 @@ h3 {
 
 select {
   width: 8vw;
-  height: 4.4vw;
+  height: 3vw;
   font-size: 1.6vw;
   font-weight: bold;
   border: 4px solid black;
@@ -396,7 +399,7 @@ textarea {
 .equation-key>h4,
 .equation-values>h4 {
   margin-bottom: 2vh;
-  font-size: 1.75vw;
+  font-size: 1.6vw;
 }
 
 .equation-values>h4 {
@@ -465,7 +468,7 @@ textarea {
 
 /* Transactions Table */
 
-.transaction-table h4 {
+.transaction-table h4, .leaderboard-table h4 {
   display: table-cell;
   margin-left: auto;
   margin-right: auto;
@@ -483,11 +486,6 @@ textarea {
 .expanded.transactions td {
   padding: 0;
 }
-
-/* .transaction-options {
-  width: 75vw;
-  height: 17vw;
-} */
 
 .transaction-master {
   position: absolute;
@@ -528,4 +526,5 @@ textarea {
   width: 75vw;
 }
 
-/* Finish Master Graph */
+/* Leaderboard */
+

@@ -89,7 +89,7 @@
 
   <!-- headers -->
 
-  <h2 id="header">The Market</h2>
+  <h2 id="header">Leaderboard</h2>
   <div class="balance-net">
     <p>Balance: $4,759,285.83</p>
     <p>Net Worth: $6,375,375.85</p>
@@ -113,7 +113,7 @@ diznee
  -->
 
   <!-- The Market -->
-  <div class="table-container" id="market-screen">
+  <div class="table-container" id="market-screen" style="display: none;">
     <table class="market-table">
       <tr>
         <th>Company</th>
@@ -267,7 +267,7 @@ diznee
 
   <!-- Transactions -->
 
-  <div class="table-container" id="transactions-screen" style="display: none;">
+  <div class="table-container" id="transactions-screen">
     <table class="transaction-table">
       <tr>
         <th>Username</th>
@@ -342,11 +342,39 @@ diznee
           <red>Not Staking</red>
         </td>
       </tr>
-      <tr>
-        <td>🟢 Bennett</td>
-        <td>$0.00</td>
-        <td>
-          <red>Not Staking</red>
+      <tr class="expanded">
+        <td colspan="3">
+          <div class="default-info">
+            <h4>🟢 Bennett</h4>
+            <h4>$739,793,573,573.02</h4>
+            <h4>
+              <red>Not Staking</red>
+            </h4>
+          </div>
+          <div class="transaction-master">
+            <h5>You give $</h5>
+            <input type="number" min="0" value="100">
+            <h5> in </h5>
+            <input type="number" min="0" max="24" value="0">
+            <select>
+              <option value="Minutes">Minutes</option>
+              <option value="Hours" selected>Hours</option>
+              <option value="Days">Days</option>
+            </select>
+          </div>
+          <div class="transaction-slave">
+            <h5>You get $</h5>
+            <input type="number" min="0" value="1000">
+            <h5> in </h5>
+            <input type="number" min="0" max="24" value="10">
+            <select>
+              <option value="Minutes">Minutes</option>
+              <option value="Hours" selected>Hours</option>
+              <option value="Days">Days</option>
+            </select>
+          </div>
+          <textarea placeholder="Write a message to Bennett..." ></textarea>
+          <input type="submit" class="send-transaction-request" onclick="alert('transaction request sent to bennett')" value="Send Request">
         </td>
       </tr>
       <tr>
@@ -371,5 +399,3 @@ diznee
 </body>
 
 </html>
-
-<!-- ok so now like code in every single other page -->
